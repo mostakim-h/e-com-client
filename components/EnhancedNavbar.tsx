@@ -18,6 +18,7 @@ import { getAllProducts } from "@/data/products";
 import type { Product } from "@/types";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import {Dropdown, DropdownItem, DropdownMenu, DropdownTrigger} from "@heroui/dropdown";
+import {Alert} from "@heroui/alert";
 
 export const EnhancedNavbar = () => {
   const router = useRouter();
@@ -84,6 +85,13 @@ export const EnhancedNavbar = () => {
     <>
       {/* Main Navbar - Clean & Modern with Dark Mode Support */}
       <div className="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50 transition-colors">
+        {/*Under development*/}
+
+        <div className="flex items-center justify-center w-full bg-green-500/10 text-green-500 text-sm py-3">
+          This site is currently under development
+        </div>
+
+
         <div className="container mx-auto max-w-7xl px-6">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
