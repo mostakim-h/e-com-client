@@ -138,7 +138,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div className="flex items-center justify-between w-full">
           <div className="flex items-center gap-2">
             <span className="text-large font-bold text-primary dark:text-[#00B207]">
-              ${product.price.toFixed(2)}
+              {product.price.toFixed(2)} ৳
             </span>
             {product.originalPrice && (
               <span className="text-small text-default-500 dark:text-gray-500 line-through">

@@ -17,6 +17,7 @@ import { useWishlist } from "@/contexts/WishlistContext";
 import { getAllProducts } from "@/data/products";
 import type { Product } from "@/types";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import {Dropdown, DropdownItem, DropdownMenu, DropdownTrigger} from "@heroui/dropdown";
 
 export const EnhancedNavbar = () => {
   const router = useRouter();
@@ -320,46 +321,68 @@ export const EnhancedNavbar = () => {
         <div className="container mx-auto max-w-7xl px-6">
           <div className="flex items-center justify-between py-3">
             <nav className="flex items-center gap-8">
-              <Button
-                as={NextLink}
-                href="/"
-                variant="light"
-                className="text-sm font-semibold text-gray-700 dark:text-gray-200 hover:text-[#00B207] dark:hover:text-[#00B207] transition-colors"
-              >
-                Home
-              </Button>
+
               <Button
                 as={NextLink}
                 href="/shop"
                 variant="light"
                 className="text-sm font-semibold text-gray-700 dark:text-gray-200 hover:text-[#00B207] dark:hover:text-[#00B207] transition-colors"
               >
-                Shop
+                All Categories
               </Button>
-              <Button
-                as={NextLink}
-                href="/about"
-                variant="light"
-                className="text-sm font-semibold text-gray-700 dark:text-gray-200 hover:text-[#00B207] dark:hover:text-[#00B207] transition-colors"
-              >
-                About Us
-              </Button>
-              <Button
-                as={NextLink}
-                href="/blog"
-                variant="light"
-                className="text-sm font-semibold text-gray-700 dark:text-gray-200 hover:text-[#00B207] dark:hover:text-[#00B207] transition-colors"
-              >
-                Blog
-              </Button>
-              <Button
-                as={NextLink}
-                href="/contact"
-                variant="light"
-                className="text-sm font-semibold text-gray-700 dark:text-gray-200 hover:text-[#00B207] dark:hover:text-[#00B207] transition-colors"
-              >
-                Contact Us
-              </Button>
+
+              <Dropdown>
+                <DropdownTrigger>
+                  <Button variant="light">Winter-25 new collections</Button>
+                </DropdownTrigger>
+                <DropdownMenu aria-label="Static Actions">
+                  <DropdownItem key="edit">Winter Combo</DropdownItem>
+                  <DropdownItem key="new">Waistcoat</DropdownItem>
+                  <DropdownItem key="copy">Sweat Shirt</DropdownItem>
+                  <DropdownItem key="edit">Sneakers</DropdownItem>
+                  <DropdownItem key="edit">Jacket</DropdownItem>
+                  <DropdownItem key="edit">Coat</DropdownItem>
+                  <DropdownItem key="edit">Boots</DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
+
+              <Dropdown>
+                <DropdownTrigger>
+                  <Button variant="light">Panjabi</Button>
+                </DropdownTrigger>
+                <DropdownMenu aria-label="Static Actions">
+                  <DropdownItem key="edit">Platinum</DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
+
+              <Dropdown>
+                <DropdownTrigger>
+                  <Button variant="light">T-shirt</Button>
+                </DropdownTrigger>
+                <DropdownMenu aria-label="Static Actions">
+                  <DropdownItem key="edit">Regular Pattern</DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
+
+              <Dropdown>
+                <DropdownTrigger>
+                  <Button variant="light">Pant & Trouser</Button>
+                </DropdownTrigger>
+                <DropdownMenu aria-label="Static Actions">
+                  <DropdownItem key="edit">Trouser</DropdownItem>
+                  <DropdownItem key="edit">Denim Pant</DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
+
+              <Dropdown>
+                <DropdownTrigger>
+                  <Button variant="light">Attar</Button>
+                </DropdownTrigger>
+                <DropdownMenu aria-label="Static Actions">
+                  <DropdownItem key="edit">Attar Combo</DropdownItem>
+                  <DropdownItem key="edit">Series 240</DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
             </nav>
 
             <div className="flex items-center gap-2 text-sm">

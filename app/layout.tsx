@@ -9,6 +9,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans, fontHeading, fontBody } from "@/config/fonts";
 import { EnhancedNavbar } from "@/components/EnhancedNavbar";
 import { EnhancedFooter } from "@/components/EnhancedFooter";
+import React from "react";
 
 export const metadata: Metadata = {
   title: {

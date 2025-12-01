@@ -5,7 +5,6 @@
 
 "use client";
 
-import { Card, CardBody } from "@heroui/card";
 import { TruckIcon, ShieldIcon, HeartFilledIcon, CheckIcon } from "@/components/icons";
 
 export default function AboutPage() {
